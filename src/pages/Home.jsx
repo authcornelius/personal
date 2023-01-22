@@ -1,7 +1,7 @@
 import React from 'react'
 import HomeImg from '../assets/casual-life-3d-boy-sitting-at-the-desk-with-open-book.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWordpress, faJs, faBootstrap, faReact, faNodeJs, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faWordpress, faJs, faBootstrap, faReact, faNodeJs, faWhatsapp, faGooglePlusG } from '@fortawesome/free-brands-svg-icons'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import MongoDB from "../assets/mongodb.png"
@@ -40,12 +40,12 @@ function Home() {
                 Let's Talk <FontAwesomeIcon icon={faPaperPlane} className="text-white ml-2" />
               </button>
 
-              <button className='bg-zinc-800 text-white px-3 py-2.5 rounded ml-5'>
+              <button className='bg-green-500 text-white px-3 py-2.5 rounded ml-5'>
                 <FontAwesomeIcon icon={faWhatsapp} className="text-white" />
               </button>
 
-              <button className='bg-zinc-800 text-white px-3 py-2.5 rounded ml-2'>
-                <FontAwesomeIcon icon={faEnvelope} className="text-white" />
+              <button className='bg-white text-white px-3 py-2.5 rounded ml-2'>
+                <FontAwesomeIcon icon={faGooglePlusG} className="text-red-500" />
               </button>
             </div>
           </div>

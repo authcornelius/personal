@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAlignRight, faAngleLeft, faAngleRight, faCalendarAlt, faEnvelope, faHome, faMusic, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faAlignRight, faAngleLeft, faAngleRight, faCalendarAlt, faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
 import { Link, NavLink } from 'react-router-dom';
 import { faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
@@ -8,7 +8,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 function Footer() {
   return (
     <div>
-      <footer className=' bg-black mb-4'>
+      <footer className=' bg-black mb-4 fixed-bottom'>
         <div className='offset-md-1'>
           <div className='container text-center justify-center align-middle self-center'>
             <div className='col-sm-12 col-md-7 offset-md-2 d-flex justify-around'>
@@ -35,13 +35,8 @@ function Footer() {
                     <FontAwesomeIcon icon={faGithub}  className="text-white" />
                   </button>
                 </Link>
-
-                <Link to="" className='d-block d-lg-none'>
-                  <button className='text-whit3 py-2 rounded'>
-                    <FontAwesomeIcon icon={faMusic}  className="text-white" />
-                  </button>
-                </Link>
             </div>
+            
             <div className='col-sm-12 col-md-7 offset-md-2 border d-flex justify-around rounded-lg'>           
               <NavLink to="/" className="py-2.5">
                 <button className='bg-zinc-800 text-white px-3 py-2 rounded transition ease-in-out duration-300'>
@@ -90,12 +85,6 @@ function Footer() {
               <Link to="" className='d-none d-lg-block py-2.5 '>
                 <button className='bg-zinc-800 text-white px-3 py-2 rounded'>
                   <FontAwesomeIcon icon={faGithub}  className="text-white" />
-                </button>
-              </Link>
-
-              <Link to="" className='d-none d-lg-block py-2.5'>
-                <button className='bg-zinc-800 text-white px-3 py-2 rounded'>
-                  <FontAwesomeIcon icon={faMusic}  className="text-white" />
                 </button>
               </Link>
 
