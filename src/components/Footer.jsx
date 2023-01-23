@@ -4,14 +4,22 @@ import { faAlignRight, faAngleLeft, faAngleRight, faCalendarAlt, faEnvelope, faH
 import { Link, NavLink } from 'react-router-dom';
 import { faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import { useState } from 'react';
 
 function Footer() {
+
+  const [MobileView, setMobileView ] = useState(!true)
+  const toggleMobileView = () => setMobileView(!MobileView)
+
   return (
     <div>
-      <footer className=' bg-black mb-4 fixed-bottom'>
+      <footer className=' bg-[#000000c9] mb-4 fixed-bottom'>
         <div className='offset-md-1'>
           <div className='container text-center justify-center align-middle self-center'>
-            <div className='col-sm-12 col-md-7 offset-md-2 d-flex justify-around'>
+
+
+            {MobileView ?
+            <div className='col-sm-12 col-md-5 offset-md-3 d-flex justify-around'>
               <Link to="/About" className='d-block d-lg-none'>
                   <button className=' text-white-3 py-2 rounded'>
                     <FontAwesomeIcon icon={faCalendarAlt} className="text-white" />
@@ -35,9 +43,9 @@ function Footer() {
                     <FontAwesomeIcon icon={faGithub}  className="text-white" />
                   </button>
                 </Link>
-            </div>
+            </div> : null}
             
-            <div className='col-sm-12 col-md-7 offset-md-2 border d-flex justify-around rounded-lg'>           
+            <div className='col-sm-12 col-md-5 offset-md-3 border d-flex justify-around rounded-lg'>           
               <NavLink to="/" className="py-2.5">
                 <button className='bg-zinc-800 text-white px-3 py-2 rounded transition ease-in-out duration-300'>
                   <FontAwesomeIcon icon={faHome} className="text-white" />
@@ -89,7 +97,7 @@ function Footer() {
               </Link>
 
               <div className='py-2.5 d-lg-none '>
-                <button className='bg-zinc-800 text-white px-3 py-2 rounded'>
+                <button className='bg-zinc-800 text-white px-3 py-2 rounded' onClick={toggleMobileView}>
                   <FontAwesomeIcon icon={faAlignRight} />
                 </button>
               </div>

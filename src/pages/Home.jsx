@@ -3,13 +3,12 @@ import HomeImg from '../assets/casual-life-3d-boy-sitting-at-the-desk-with-open-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWordpress, faJs, faBootstrap, faReact, faNodeJs, faWhatsapp, faGooglePlusG } from '@fortawesome/free-brands-svg-icons'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import MongoDB from "../assets/mongodb.png"
 
 function Home() {
   return (
     <div className="">
-      <section className=' my-28 min-w-fit'>
+      <section className=' my-32 min-w-fit'>
         <div className='container min-w-fit'>
           <div className='border-4 w-52 h-48 p-3.5 rounded-circle mx-auto'>
             <img src={HomeImg} alt="reading" />
